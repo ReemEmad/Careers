@@ -26,18 +26,18 @@ function Footer() {
         <div className="footer_right_part">
           <div className="footer_right">
             <div className="footer_links">
-              <a>ABOUT US</a>
-              <a>PRODUCTS</a>
-              <a>VIRTUAL TOUR</a>
+              <a href="##">ABOUT US</a>
+              <a href="##">PRODUCTS</a>
+              <a href="##">VIRTUAL TOUR</a>
             </div>
             <div className="footer_links">
-              <a>OFFERS</a>
-              <a>NEWS & EVENTS</a>
-              <a>ABOUT THE DEVELOPER</a>
+              <a href="##">OFFERS</a>
+              <a href="##">NEWS & EVENTS</a>
+              <a href="##">ABOUT THE DEVELOPER</a>
             </div>
             <div className="footer_links">
-              <a>CONTACT US</a>
-              <a>CAREERS</a>
+              <a href="##">CONTACT US</a>
+              <a href="##">CAREERS</a>
             </div>
           </div>
           <div className="footer_social">

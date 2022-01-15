@@ -1,7 +1,7 @@
 import React from "react"
 import propTypes from "prop-types"
 import { Dot } from "pure-react-carousel"
-import { Button, Container } from "semantic-ui-react"
+import { Button } from "semantic-ui-react"
 function CustomDotGroup({ slides, size }) {
   return (
     <Button.Group size={size}>

@@ -7,7 +7,6 @@ import {
   Menu,
   Dropdown,
   message,
-  Space,
   Input,
   Select,
 } from "antd"
@@ -27,13 +26,7 @@ import slider1 from "./assets/DJI_-1.png"
 import slider2 from "./assets/DJI_0177-0.png"
 import JobCard from "./components/JobCard"
 
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from "pure-react-carousel"
+import { CarouselProvider, Slider, Slide } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
 import Footer from "./components/Footer"
 import { filterJobs, getAllJobs, searchJobs } from "./Apis"
@@ -110,7 +103,10 @@ function App() {
           title={<img src={src} alt="logo" />}
           extra={[
             <span className="language">
-              <a className="languange--active">EN</a> | <a>Ar</a>
+              <a className="languange--active" href="##">
+                EN
+              </a>{" "}
+              | <a href="##">Ar</a>
             </span>,
             <span className="burger">
               <MenuOutlined />
@@ -120,9 +116,9 @@ function App() {
         <section className="careers-main">
           <div className="careers-main__links">
             <h3 className="careers-main--header">CAREERS</h3>
-            <a>Home</a>
+            <a href="##">Home</a>
             <span> - </span>
-            <a>Careers</a>
+            <a href="##">Careers</a>
           </div>
           {/* <span className="careers-main--search"> */}
           <h1>Search Among Our Jobs And Start Your Career</h1>
@@ -148,30 +144,35 @@ function App() {
         <section className="careers-cards">
           <div className="careers-cards__filter">
             <a
+              href="##"
               className={selected === 0 ? "careers-cards__filter_active" : ""}
               onClick={getData}
             >
               All Jobs
             </a>
             <a
+              href="##"
               className={selected === 1 ? "careers-cards__filter_active" : ""}
               onClick={() => handleJobsFilter("hr", 1)}
             >
               Human Resources
             </a>
             <a
+              href="##"
               className={selected === 2 ? "careers-cards__filter_active" : ""}
               onClick={() => handleJobsFilter("customer-support", 2)}
             >
               Customer Support
             </a>
             <a
+              href="##"
               className={selected === 3 ? "careers-cards__filter_active" : ""}
               onClick={() => handleJobsFilter("software-dev", 3)}
             >
               Web & Movile Development
             </a>
             <a
+              href="##"
               className={selected === 4 ? "careers-cards__filter_active" : ""}
               onClick={() => handleJobsFilter("business", 4)}
             >

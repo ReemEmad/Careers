@@ -40,7 +40,6 @@ function JobCard({ id, category, job_type, date, title, desc }) {
 
       <Modal
         visible={visible}
-        // width={900}
         footer={<></>}
         onCancel={handleCancel}
         className="modal"
