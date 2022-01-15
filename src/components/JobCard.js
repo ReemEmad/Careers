@@ -55,22 +55,10 @@ function JobCard({ id, category, job_type, date, title, desc }) {
                 <p>{(ms / (1000 * 60 * 60 * 24)).toFixed(0)} days ago</p>
               </div>
             </section>
-
-            {/* {desc} */}
-
-            <p>
-              Misr is more than just a real estate development company – we are
-              place-makers. With projects across the residential, retail,
-              hospitality and commercial segments, our core mission is to create
-              soulful places that enrich people’s lives. To deliver on the
-              promise, our research-led approach explores the social behaviors,
-              habits and unique characteristics of the members of our
-              collaborative communities; who belong to a variety of fields
-              ranging from fashion and food to design and technology. We are
-              redefining the real estate development landscape by placing R&D
-              insights at the core of our operations to shape better living
-              environments.
-            </p>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: desc
+              }}></div>
             <section className="card_tags">
               <div className="card_tag">
                 <p>{job_type}</p>
