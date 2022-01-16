@@ -259,7 +259,7 @@ function App() {
                 totalSlides={3}
                 naturalSlideWidth={100}
                 naturalSlideHeight={125}
-                // visibleSlides={1}
+                visibleSlides={1}
                 currentSlide={0}
               >
                 <Slider className="slider">
