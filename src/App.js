@@ -9,14 +9,10 @@ import {
   message,
   Input,
   Select,
+  Carousel,
 } from "antd"
 
-import {
-  DownOutlined,
-  UserOutlined,
-  MenuOutlined,
-  SearchOutlined,
-} from "@ant-design/icons"
+import { DownOutlined, MenuOutlined, SearchOutlined } from "@ant-design/icons"
 import src from "./assets/Logo-02.png"
 import flower from "./assets/Illustrations2.png"
 import bird from "./assets/Illustrations.png"
@@ -82,17 +78,25 @@ function App() {
     console.log(data)
   }
 
+  function onChange(a, b, c) {
+    console.log(a, b, c)
+  }
+
+  const contentStyle = {
+    height: "160px",
+    color: "#fff",
+    lineHeight: "160px",
+    textAlign: "center",
+    background: "#364d79",
+  }
+
   const menu = (
     <Menu onClick={handleMenuClick}>
-      <Menu.Item key="1" icon={<UserOutlined />}>
-        1st menu item
-      </Menu.Item>
-      <Menu.Item key="2" icon={<UserOutlined />}>
-        2nd menu item
-      </Menu.Item>
-      <Menu.Item key="3" icon={<UserOutlined />}>
-        3rd menu item
-      </Menu.Item>
+      <Menu.Item key="1">Human Resources</Menu.Item>
+      <Menu.Item key="2">Customer Support</Menu.Item>
+      <Menu.Item key="3">Web & Mobile Development</Menu.Item>
+      <Menu.Item key="4">Business Development</Menu.Item>
+      <Menu.Item key="5">Marketing</Menu.Item>
     </Menu>
   )
   return (
@@ -134,8 +138,11 @@ function App() {
 
             {/* <button onClick={searchPlz}> ok</button> */}
             <Select placeholder="All Jobs" className="careers-main_selector">
-              <Option value="Option1">Option1</Option>
-              <Option value="Option2">Option2</Option>
+              <Option value="Option1">Human Resources</Option>
+              <Option value="Option2">Customer Support</Option>
+              <Option value="Option3">Web & Mobile Development</Option>
+              <Option value="Option4">Business Development</Option>
+              <Option value="Option4">Marketing</Option>
             </Select>
           </Input.Group>
           {/* </Space> */}
@@ -252,7 +259,7 @@ function App() {
                 totalSlides={3}
                 naturalSlideWidth={100}
                 naturalSlideHeight={125}
-                visibleSlides={1}
+                // visibleSlides={1}
                 currentSlide={0}
               >
                 <Slider className="slider">
@@ -266,12 +273,23 @@ function App() {
                     <img src={slider2} alt="" />
                   </Slide>
                 </Slider>
-                {/* <div className="slider_control"> */}
-                <CustomDotGroup slides={3} />
-                {/* <ButtonBack>Back</ButtonBack>
-                  <ButtonNext>Next</ButtonNext> */}
-                {/* </div> */}
+                <div className="slider_control">
+                  <CustomDotGroup slides={3} />
+                </div>
               </CarouselProvider>
+            </div>
+            <div className="slider_mobile">
+              <Carousel afterChange={onChange}>
+                <div>
+                  <img src={slider1} alt="" />
+                </div>
+                <div>
+                  <img src={slider2} alt="" />
+                </div>
+                <div>
+                  <img src={slider2} alt="" />
+                </div>
+              </Carousel>
             </div>
           </div>
         </section>

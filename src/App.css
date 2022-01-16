@@ -288,15 +288,19 @@ p {
 .partners_text p {
   font-weight: lighter;
 }
+.footer_email button {
+  background: transparent;
+  padding: 17px 60px 30px 60px;
+  border-radius: 7px;
+}
 
 .partners_companies {
-  width: 133%;
+  width: 144%;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  /* bottom: 20px; */
   left: -24%;
   top: 33%;
 }
@@ -349,8 +353,8 @@ p {
   width: 50%;
 }
 .ant-input-group-compact {
-  display: flex;
-  width: 40%;
+  display: flex !important;
+  width: 50%;
   align-items: center;
   background-color: var(--color-white);
   border-radius: 10px;
@@ -359,7 +363,7 @@ p {
 
 .ant-input-affix-wrapper {
   border: none;
-  border-right: 2px solid black;
+  border-right: 7px solid black;
   align-items: center;
 }
 
@@ -367,7 +371,9 @@ p {
   border: none;
   outline: none;
 }
+
 .ant-select-selector {
+  outline: none;
   border: none;
   align-items: center;
 }
@@ -384,6 +390,7 @@ p {
   border-radius: 56px;
   width: 700px;
   height: 400px;
+  z-index: 3939;
 }
 
 .construction_container {
@@ -393,10 +400,6 @@ p {
   justify-content: center;
   align-items: center;
 }
-/* .slider {
-  padding-top: 550px;
-  margin-left: 500px;
-} */
 
 .buttonBack___1mlaL .carousel__back-button {
   padding: 50px;
@@ -548,6 +551,10 @@ p {
   width: 900px;
   /* transform-origin: 78.4px 857.4px; */
 }
+
+.slider_mobile {
+  display: none;
+}
 /* ------------------------ */
 
 /* MEDIA QUERIES */
@@ -680,6 +687,64 @@ p {
   }
   .ant-modal {
     margin-left: 20px;
+  }
+  .partners_flower {
+    overflow-x: hidden;
+    right: 0px;
+  }
+  .partners_middle {
+    align-self: center;
+  }
+  .partners {
+    height: 107vh;
+  }
+  .ant-input-group-compact {
+    width: 107%;
+  }
+  .partners_companies {
+    overflow-x: hidden;
+  }
+  .construction_container {
+    flex-direction: column;
+  }
+  .construction_text {
+    margin-top: 140px;
+    font-size: var(--fontsize-sm);
+    line-height: 200%;
+  }
+
+  .mini {
+    margin-left: 30px;
+  }
+  .mini > * {
+    width: 90px;
+    margin-top: 220px;
+  }
+  .carousel__inner-slide {
+    height: 10px;
+    margin-right: 20px;
+  }
+  .construction_slider img {
+    width: 200px;
+    height: 150px;
+  }
+
+  .construction_slider {
+    margin-top: 280px;
+  }
+  .construction {
+    padding: 40px 10px;
+  }
+  .partners {
+    position: relative;
+  }
+
+  .partners_companies {
+    top: -1%;
+    flex-direction: column;
+    padding-bottom: 120px;
+    position: relative;
+    /* justify-content: center; */
   }
 }
 
