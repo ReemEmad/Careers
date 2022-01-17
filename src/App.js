@@ -9,9 +9,7 @@ import {
   message,
   Input,
   Select,
-  Carousel,
 } from "antd"
-
 import { DownOutlined, MenuOutlined, SearchOutlined } from "@ant-design/icons"
 import src from "./assets/Logo-02.png"
 import flower from "./assets/Illustrations2.png"
@@ -20,13 +18,13 @@ import right from "./assets/Group 1269.png"
 import left from "./assets/Group 1270.png"
 import slider1 from "./assets/DJI_-1.png"
 import slider2 from "./assets/DJI_0177-0.png"
-import JobCard from "./components/JobCard"
+import JobCard from "./components/JobCard/JobCard"
+import Footer from "./components/Footer/Footer"
+import CustomDotGroup from "./components/CustomDotGroup"
 
 import { CarouselProvider, Slider, Slide } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
-import Footer from "./components/Footer"
 import { filterJobs, getAllJobs, searchJobs } from "./Apis"
-import CustomDotGroup from "./components/CustomDotGroup"
 
 function App() {
   const { Option } = Select
@@ -68,26 +66,11 @@ function App() {
 
   function handleMenuClick(e) {
     message.info("Click on menu item.")
-    console.log("click", e)
   }
 
   const searchPlz = async () => {
-    console.log(searchKey)
     const { data } = await searchJobs(searchKey, jobsCount)
     setjobs(data.jobs)
-    console.log(data)
-  }
-
-  function onChange(a, b, c) {
-    console.log(a, b, c)
-  }
-
-  const contentStyle = {
-    height: "160px",
-    color: "#fff",
-    lineHeight: "160px",
-    textAlign: "center",
-    background: "#364d79",
   }
 
   const menu = (
@@ -124,10 +107,9 @@ function App() {
             <span> - </span>
             <a href="##">Careers</a>
           </div>
-          {/* <span className="careers-main--search"> */}
+
           <h1>Search Among Our Jobs And Start Your Career</h1>
-          {/* </span> */}
-          {/* <Space wrap> */}
+
           <Input.Group compact>
             <Input
               defaultValue="Find Your Job"
@@ -136,7 +118,6 @@ function App() {
               onKeyUp={searchPlz}
             />
 
-            {/* <button onClick={searchPlz}> ok</button> */}
             <Select placeholder="All Jobs" className="careers-main_selector">
               <Option value="Option1">Human Resources</Option>
               <Option value="Option2">Customer Support</Option>
@@ -145,7 +126,6 @@ function App() {
               <Option value="Option4">Marketing</Option>
             </Select>
           </Input.Group>
-          {/* </Space> */}
         </section>
 
         <section className="careers-cards">
@@ -277,19 +257,6 @@ function App() {
                   <CustomDotGroup slides={3} />
                 </div>
               </CarouselProvider>
-            </div>
-            <div className="slider_mobile">
-              <Carousel afterChange={onChange}>
-                <div>
-                  <img src={slider1} alt="" />
-                </div>
-                <div>
-                  <img src={slider2} alt="" />
-                </div>
-                <div>
-                  <img src={slider2} alt="" />
-                </div>
-              </Carousel>
             </div>
           </div>
         </section>

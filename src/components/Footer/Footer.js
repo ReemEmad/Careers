@@ -1,10 +1,11 @@
 import { Input, Button } from "antd"
 import React from "react"
-import twitterSrc from "../assets/twitter.png"
-import facebookSrc from "../assets/facebook.png"
-import instagramSrc from "../assets/instagram (-1.png"
-import youtubeSrc from "../assets/youtube.png"
-import logo from "../assets/Group 647.png"
+import twitterSrc from "../../assets/twitter.png"
+import facebookSrc from "../../assets/facebook.png"
+import instagramSrc from "../../assets/instagram (-1.png"
+import youtubeSrc from "../../assets/youtube.png"
+import logo from "../../assets/Group 647.png"
+import "./footer.css"
 
 function Footer() {
   return (

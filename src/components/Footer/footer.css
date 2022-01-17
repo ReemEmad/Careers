@@ -1,0 +1,120 @@
+.footer_email button {
+  background: transparent;
+  padding: 17px 60px 30px 60px;
+  border-radius: 7px;
+}
+
+.footer {
+  background: var(--color-offwhite);
+  display: flex;
+  gap: 80px;
+  /* justify-content: space-around; */
+  align-items: center;
+  padding: 80px;
+  /* padding-right: 25px; */
+}
+
+.footer_left {
+  display: flex;
+  gap: 60px;
+  /* justify-content: space-evenly; */
+  align-items: center;
+}
+.footer_sublogo {
+  width: 80%;
+}
+.footer_sublogo,
+.footer_links a {
+  font-size: var(--fontsize-xs);
+  font-weight: lighter;
+  color: var(--color-blue);
+}
+
+.footer_email {
+  padding: 0 30px;
+  border-left: 1px solid var(--color-grey);
+  width: 42%;
+}
+
+.footer_email p {
+  font-size: 1rem;
+}
+
+.footer_email p:first-child {
+  font-size: var(--fontsize-sm);
+}
+
+.email {
+  border-top: 2px solid var(--color-grey);
+}
+
+.footer_links {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+}
+
+.footer_right {
+  line-height: 300%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+.footer_social img {
+  padding-right: 20px;
+}
+.footer_social {
+  margin-top: 40px;
+  display: flex;
+  gap: 150px;
+  /* align-items: center; */
+  position: relative;
+}
+.footer_social p {
+  margin-top: 6px;
+  font-size: var(--fontsize-xs);
+  color: var(--color-brown);
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    padding: 45px 27px;
+    gap: 15px;
+    align-items: baseline;
+  }
+  .footer_left {
+    flex-wrap: wrap;
+    gap: unset;
+  }
+  .footer_email {
+    padding: 0 10px;
+  }
+  .footer_email p {
+    width: 190%;
+  }
+  .footer .ant-btn {
+    padding: 4px 10px;
+    background: transparent;
+  }
+
+  .footer_right {
+    display: unset;
+    align-self: flex-end;
+  }
+  .footer_social {
+    gap: 10px;
+    flex-direction: column;
+  }
+  .footer_social div:first-child {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .footer_social img {
+    padding-right: 9px;
+  }
+}

@@ -1,8 +1,9 @@
 import React, { useState } from "react"
 import { Modal, Button, Input } from "antd"
-import rect from "../assets/Group 1273.png"
+import rect from "../../assets/Group 1273.png"
+import "./JobCard.css"
 
-function JobCard({ id, category, job_type, date, title, desc }) {
+function JobCard({ category, job_type, date, title, desc }) {
   const { TextArea } = Input
 
   const [visible, setvisible] = useState(false)
